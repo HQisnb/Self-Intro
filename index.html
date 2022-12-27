@@ -26,7 +26,7 @@
 
                 <ul class="secondary-nav">
                     <li><a class="kk" href="#">Hobbies</a></li>
-                    <li class="go-premium-cta"><a class="kk" href="#">Resume</a></li>
+                    <li class="go-premium-cta"><a class="kk", href="https://www.linkedin.com/in/haoqi-zhang-b6a86721a">Resume</a></li>
                 </ul>
             </nav>
        </div>
@@ -54,14 +54,8 @@
 
    <section class="features-section">
        <div class="container">
-        <h2>Keywords of Strength</h2>
+        <h2>Some advantages not relevant to Academic Aspect</h2>
             <ul class="features-list">
-                <li class="jjj"><img class="check" src="images/check.svg">C & C++</li>
-                <li class="jjj"><img class="check" src="images/check.svg">Python</li>  
-                <li class="jjj"><img class="check" src="images/check.svg">SQL</li>
-                <li class="jjj"><img class="check" src="images/check.svg">R</li>
-                <li class="jjj"><img class="check" src="images/check.svg">html/CSS</li>
-                <li class="jjj"><img class="check" src="images/check.svg">Also MS Office Big Set!!!</li> 
                 <li class="jjj"><img class="check" src="images/check.svg">Sports</li>
                 <li class="jjj"><img class="check" src="images/check.svg">Optimist</li>
                 <li class="jjj"><img class="check" src="images/check.svg">Learn Fast</li>
@@ -105,7 +99,7 @@
     <div class="container">
         <div class="contact-left">
             <h2>Contact</h2>
-            <form action="">
+            <form action="mailto:zhang001221@gmail.com", method="post", enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Preferred Name">
 
@@ -135,8 +129,68 @@
         mobileBtnExit.addEventListener('click',() => {
             nav.classList.remove('menu-sss');
         })
-        
-
    </script>
+
+   <section class="relevantCourses">
+    <label for="course">What I Can Do:</label><br>
+    <input type="text", id="courseee", name="course", placeholder="One of : CS, STAT, MATH, OTHER">
+    <input type="button", value="Look", id="but1", onclick="showCourse()">
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <p id="output4"></p>
+    <script type="text/javascript">
+            var courses = {
+    "CS":{
+        "name":"Computer Science",
+        "programming language":["C++ & C", "Python", "SQL", "R"],
+        "content":["Algorithm", "Data Structures", 
+        "Machine Learning", "SQL", "Object-oriented-programming", "and more!!!"],
+        "skills to do well":"sleep well then work more efficient~"
+    },
+
+    "STAT":{
+        "name":"Statistics/Analyzing Data",
+        "programming language":"R studio",
+        "content":["Plot", "Stat Models", "Classification"],
+        "skills to do well":"go to lectures and read slides :)"
+    },
+
+    "MATH":{
+        "name":"Math",
+        "programming language":"No",
+        "content":["CO and Graph", "Algebra", "Geometry", "Matrix"],
+        "skills to do well":"greatly depend on individuals"
+    },
+
+    "OTHER":{
+        "name":"bird/elective",
+        "programming language":"No",
+        "content":"No",
+        "skills to do well":"attend the exams"
+    }
+};
+            var out1 = document.getElementById("output1");
+            var out2 = document.getElementById("output2");
+            var out3 = document.getElementById("output3");
+            var out4 = document.getElementById("output4");
+            function showCourse() {
+                const inputtt = document.getElementById("courseee").value;
+                alert("the value is: "+inputtt);
+                //alert(courses[inputtt]["name"]);
+                out1.innerHTML = "Subject : " + courses[inputtt]["name"];
+                out2.innerHTML = "Programming Language : " + courses[inputtt]["programming language"];
+                out3.innerHTML = "Content : " + courses[inputtt]["content"];
+                out4.innerHTML = "How to do well : " + courses[inputtt]["skills to do well"];
+                //out1.innerHTML = inputtt;
+            }
+
+
+    </script>
+
+
+   </section>
+
 </body>
 </html>
+
